@@ -19,12 +19,23 @@
   z-index: 0;
 }
 
+  .itemspage .itemslist .win-item .item-title {
+      -ms-grid-row: 1;
+      overflow: hidden;
+      width: 220px;
+      font-size:  24px;
+      margin-top: 12px;
+      margin-left: 15px;
+  }
+
   .itemspage .itemslist .item {
     -ms-grid-columns: 1fr;
-    -ms-grid-rows: 1fr 90px;
+    -ms-grid-rows: 1fr 60px;
     display: -ms-grid;
     height: 250px;
     width: 250px;
+    background-color: #268bd2;
+    opacity: 0.8;
   }
 
     .itemspage .itemslist .item .item-image {
