@@ -1,6 +1,8 @@
 ﻿#contenthost {
     height: 100%;
     width: 100%;
+    background-color: #fdf6e3;
+    color: #586e75;
 }
 
 .fragment {
