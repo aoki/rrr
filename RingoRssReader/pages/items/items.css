@@ -3,8 +3,8 @@
   -ms-grid-row-span: 2;
 }
 
-/* このセレクターは、ui-dark/light.css が
-   .win-surface への変更を上書きしないように使用されます。 */
+/* This selector is used to prevent ui-dark/light.css from overwriting changes
+   to .win-surface. */
 .itemspage .itemslist .win-horizontal.win-viewport .win-surface {
   margin-bottom: 60px;
   margin-left: 115px;
@@ -19,46 +19,46 @@
   z-index: 0;
 }
 
-  .itemspage .itemslist .win-item .item-title {
-      -ms-grid-row: 1;
-      overflow: hidden;
-      width: 220px;
-      font-size:  24px;
-      margin-top: 12px;
-      margin-left: 15px;
-  }
-
   .itemspage .itemslist .item {
     -ms-grid-columns: 1fr;
     -ms-grid-rows: 1fr 60px;
     display: -ms-grid;
     height: 250px;
     width: 250px;
-    background-color: #268bd2;
-    opacity: 0.8;
+    background-color: #557EB9;
   }
 
-    .itemspage .itemslist .item .item-image {
-      -ms-grid-row-span: 2;
+  .itemspage .itemslist .win-item .item-title {
+    -ms-grid-row: 1;
+    overflow: hidden;
+    width: 220px;
+    font-size: 24px;
+    margin-top: 12px;
+    margin-left: 15px;
+  }
+
+
+  .itemspage .itemslist .item .item-image {
+    -ms-grid-row-span: 2;
+  }
+
+  .itemspage .itemslist .item .item-overlay {
+    -ms-grid-row: 2;
+    -ms-grid-rows: 1fr 21px;
+    display: -ms-grid;
+    padding: 6px 15px 2px 15px;
+  }
+
+    .itemspage .itemslist .item .item-overlay .item-title {
+      -ms-grid-row: 1;
+      overflow: hidden;
+      width: 220px;
     }
 
-    .itemspage .itemslist .item .item-overlay {
+    .itemspage .itemslist .item .item-overlay .item-subtitle {
       -ms-grid-row: 2;
-      -ms-grid-rows: 1fr 21px;
-      display: -ms-grid;
-      padding: 6px 15px 2px 15px;
+      width: 220px;
     }
-
-      .itemspage .itemslist .item .item-overlay .item-title {
-        -ms-grid-row: 1;
-        overflow: hidden;
-        width: 220px;
-      }
-
-      .itemspage .itemslist .item .item-overlay .item-subtitle {
-        -ms-grid-row: 2;
-        width: 220px;
-      }
 
 @media screen and (-ms-view-state: fullscreen-landscape), screen and (-ms-view-state: fullscreen-portrait), screen and (-ms-view-state: filled) {
   .itemspage .itemslist .item .item-overlay {
@@ -101,13 +101,8 @@
       padding: 7px;
     }
 
-    .itemspage .itemslist.win-rtl .win-container {
-      margin-left: 21px;
-      margin-right: 27px;
-    }
-
     .itemspage .itemslist .item {
-      -ms-grid-columns: 60px 10px 1fr;
+      -ms-grid-columns: 60px 1fr;
       -ms-grid-rows: 1fr;
       display: -ms-grid;
       height: 60px;
@@ -122,11 +117,12 @@
       }
 
       .itemspage .itemslist .item .item-overlay {
-        -ms-grid-column: 3;
+        -ms-grid-column: 2;
         -ms-grid-row: 1;
         -ms-grid-row-align: stretch;
         background: transparent;
         display: inline-block;
+        margin-left: 10px;
         padding: 0;
       }
 
@@ -144,7 +140,6 @@
 
 @media screen and (-ms-view-state: fullscreen-portrait) {
   .itemspage .itemslist .win-horizontal.win-viewport .win-surface {
-    margin-left: 95px;
-    margin-right: 95px;
+    margin-left: 100px;
   }
 }
